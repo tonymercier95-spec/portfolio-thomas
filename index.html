@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Thomas, graphiste freelance. Découvrez ses compétences en design d’interface, illustration et typographie.">
+  <title>Thomas — Graphiste freelance</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="header">
+    <nav class="wrap nav" aria-label="Navigation principale">
+      <a class="brand" href="#accueil">Thomas<span aria-hidden="true">.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu</button>
+      <ul class="nav-links" id="navigation">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+    <section class="wrap hero" id="accueil" aria-labelledby="titre" tabindex="-1">
+      <img class="portrait" src="images/portrait.jpg" width="512" height="512" alt="Homme souriant, en casquette bleue, sur fond de montagne">
+      <div>
+        <h1 id="titre">Bonjour, je suis Thomas,<br>graphiste freelance.</h1>
+        <p>J’aide les entreprises et les créateurs à donner forme à leurs idées, de l’interface web à l’illustration en passant par la typographie.</p>
+        <a class="button primary" href="#portfolio">Découvrir mes réalisations <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="titre-services" tabindex="-1">
+      <div class="wrap">
+        <h2 id="titre-services">Services et compétences</h2>
+        <div class="service-grid">
+          <article class="service">
+            <h3>Design d’interface</h3>
+            <p>Maquettes web, composants réutilisables et prototypes Figma pour des interfaces faciles à prendre en main.</p>
+          </article>
+          <article class="service">
+            <h3>Illustration</h3>
+            <p>Portraits numériques et visuels sur mesure pour vos supports éditoriaux et votre communication.</p>
+          </article>
+          <article class="service">
+            <h3>Typographie</h3>
+            <p>Compositions et lettrages qui donnent du caractère à une affiche, une édition ou une identité visuelle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="portfolio" aria-labelledby="titre-portfolio" tabindex="-1">
+      <h2 id="titre-portfolio">Travaux en vedette</h2>
+      <p class="muted section-note">Projets d’exemple d’après la maquette du challenge.</p>
+      <div class="work-grid">
+        <article class="work">
+          <img src="images/dashboard.jpg" width="768" height="512" loading="lazy" alt="Interface d’analyse bleu nuit avec une courbe violette et des indicateurs">
+          <div>
+            <h3>Design de tableaux de bord</h3>
+            <p class="work-type">Design d’interface</p>
+            <p>Une interface de suivi qui hiérarchise les indicateurs pour faciliter la lecture des données.</p>
+          </div>
+        </article>
+        <article class="work">
+          <img src="images/illustration.jpg" width="768" height="512" loading="lazy" alt="Portrait illustré aux cheveux violets, avec une fleur dorée sur fond pêche">
+          <div>
+            <h3>Portraits vibrants</h3>
+            <p class="work-type">Illustration</p>
+            <p>Une exploration du portrait numérique où le violet, le magenta et l’ocre traduisent l’expression du modèle.</p>
+          </div>
+        </article>
+        <article class="work">
+          <img src="images/typographie.jpg" width="768" height="512" loading="lazy" alt="Lettrage calligraphique ivoire sur un papier noir texturé">
+          <div>
+            <h3>36 jours de typographie</h3>
+            <p class="work-type">Typographie</p>
+            <p>Une étude du rythme et des courbes du lettrage, inspirée des formes de l’écriture malayalam.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section contact" id="contact" aria-labelledby="titre-contact" tabindex="-1">
+      <h2 id="titre-contact">Me contacter</h2>
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <h3>Parlons-en</h3>
+          <p>Une idée à développer ? Décrivez votre projet, le support envisagé et vos échéances.</p>
+          <p class="muted" id="form-info">Formulaire de démonstration. Les champs sont vérifiés dans votre navigateur et aucun message n’est transmis.</p>
+        </div>
+        <form method="post" aria-labelledby="titre-contact" aria-describedby="form-info">
+          <fieldset disabled>
+            <legend>Tous les champs sont obligatoires.</legend>
+            <div class="fields">
+              <div>
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="name" maxlength="100" required>
+              </div>
+              <div>
+                <label for="email">Adresse e-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <div>
+                <label for="service">Service souhaité</label>
+                <select id="service" name="service" required>
+                  <option value="">Choisir un service</option>
+                  <option value="interface">Design d’interface</option>
+                  <option value="illustration">Illustration</option>
+                  <option value="typographie">Typographie</option>
+                  <option value="autre">Autre projet</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" maxlength="3000" required></textarea>
+              </div>
+              <button class="button submit" type="submit">Vérifier le formulaire</button>
+            </div>
+          </fieldset>
+          <p id="form-status" role="status"></p>
+          <noscript><p>Activez JavaScript pour tester le formulaire de démonstration.</p></noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>Thomas · Graphiste freelance</p>
+      <a href="#accueil">Retour en haut <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
